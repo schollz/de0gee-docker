@@ -11,7 +11,7 @@ RUN apt-get install -y mosquitto-clients mosquitto
 # Install Python
 RUN apt-get install -y python3 python3-dev python3-pip
 RUN apt-get install -y python3-scipy python3-flask python3-sklearn python3-numpy
-RUN python3 -m pip install ujson pytest pytest-benchmark pytest-cov base58
+RUN python3 -m pip install ujson pytest pytest-benchmark pytest-cov base58 extendeddict tqdm
 
 # Install Go
 RUN wget https://storage.googleapis.com/golang/go1.9.3.linux-amd64.tar.gz
