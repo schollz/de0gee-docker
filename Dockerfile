@@ -11,7 +11,7 @@ RUN apt-get install -y mosquitto-clients mosquitto
 # Install Python
 RUN apt-get install -y python3 python3-dev python3-pip
 RUN apt-get install -y python3-scipy python3-flask python3-sklearn python3-numpy
-RUN python3 -m pip install ujson pytest pytest-benchmark pytest-cov
+RUN python3 -m pip install ujson pytest pytest-benchmark pytest-cov base58
 
 # Install Go
 RUN wget https://storage.googleapis.com/golang/go1.9.3.linux-amd64.tar.gz
@@ -24,6 +24,7 @@ ENV GOPATH /usr/local/work
 # Setup supervisor
 RUN apt-get install -y supervisor
 
+RUN echo "v0.0.1"
 RUN go get -v github.com/de0gee/de0gee-data
 RUN go install -v github.com/de0gee/de0gee-data
 WORKDIR /usr/local/work/src/github.com/de0gee/
