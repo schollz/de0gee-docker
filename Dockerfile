@@ -14,7 +14,7 @@ RUN apt-get install -y python3-scipy python3-flask python3-sklearn python3-numpy
 RUN python3 -m pip install ujson pytest pytest-benchmark pytest-cov base58 expiringdict tqdm
 
 # Install Go
-RUN wget https://storage.googleapis.com/golang/go1.9.3.linux-amd64.tar.gz
+RUN wget https://storage.googleapis.com/golang/go1.9.4.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.9.4.linux-amd64.tar.gz
 RUN rm go1.9*
 ENV PATH="/usr/local/go/bin:${PATH}"
